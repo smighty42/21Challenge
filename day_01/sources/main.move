@@ -1,22 +1,21 @@
-/// DAY 1: Modules + Primitive Types
-/// 
-/// Today you will:
-/// 1. Create a basic module
-/// 2. Learn about primitive types
-/// 
-/// Task: Verify the module builds correctly
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.move                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: smayti <serpilmayti41@gmail.com>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/24 19:20:29 by smayti            #+#    #+#             */
+/*   Updated: 2025/12/24 19:20:29 by smayti            ###   ########.fr      */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 module challenge::day_01 {
-    // Day 1: Basic module structure + primitive types
 
-    // TODO: Define three constants to practice primitive types
-    //
-    // Example format:
-    // const NUMBER: u64 = 42;
-    // const FLAG: bool = true;
-    // const MY_ADDRESS: address = @0x1;
-    //
-    // Remember: Constants must be named in UPPERCASE!
+    const NUM: u8= 7;
+    const FLAG: bool =false;
+    const ADDRESS: address = @0x1;
 
 }
 
