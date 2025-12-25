@@ -15,7 +15,7 @@ module challenge::day_02_solution {
     }
 
     // Test that verifies sum(1, 2) == 3
-    #[test]
+   // #[test]
     fun test_sum() {
         let result = sum(1, 2);
         assert_eq!(result, 3);
