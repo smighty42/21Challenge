@@ -15,7 +15,7 @@ module challenge::day_02 {
                                               // tipini belirliyor fonkisyonu yazunca 
         assert_eq!(result_sum, 3); 
        
-       // result_sum 3'e eşit mi diye bakıyor değilse hata verir 
+         // result_sum 3'e eşit mi diye bakıyor değilse hata verir 
     }
 
 }
