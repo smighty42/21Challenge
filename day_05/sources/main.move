@@ -1,14 +1,6 @@
-/// DAY 5: Control Flow & Mark Habit as Done
-/// 
-/// Today you will:
-/// 1. Learn if/else statements
-/// 2. Learn how to access vector elements
-/// 3. Write a function to mark a habit as completed
 
-module challenge::day_05 {
-    use std::vector;
-
-    // Copy from day_04
+module challenge::day_05 { // std::vector tanımlı zaten gerek yok
+      #[test_only]
     public struct Habit has copy, drop {
         name: vector<u8>,
         completed: bool,
@@ -32,18 +24,31 @@ module challenge::day_05 {
     }
 
     public fun add_habit(list: &mut HabitList, habit: Habit) {
-        vector::push_back(&mut list.habits, habit);
+        vector::push_back(&mut list.habits, habit); 
     }
 
-    // TODO: Write a function 'complete_habit' that:
-    // - Takes list: &mut HabitList and index: u64
-    // - Checks if index is valid (less than vector length)
-    // - If valid, marks that habit's completed field as true
-    // Use vector::length() to get the length
-    // Use vector::borrow_mut() to get a mutable reference to an element
-    // public fun complete_habit(list: &mut HabitList, index: u64) {
-    //     // Your code here
-    //     // Hint: if (index < length) { ... }
-    // }
+    public fun complete_habit(list: &mut HabitList, index: u64 ) //mut = mutable reference //değiştirilebilir
+    {
+        let len;
+        len = vector::length(&list.habits);
+        if(index < len)
+        {
+            let habit = vector::borrow_mut(&mut list.habits,index);
+            //borrow_mut listenin içindeki o indexe gider ve istediğin öğeyi değiştirme yetkisi verir.
+            habit.completed=true;
+        }
+    }
+
+
+    #[test]
+    fun test()
+    {
+        let mut liste = empty_list(); 
+        let habit =new_habit(b"Kod Yaz");
+        add_habit(&mut liste,habit);
+        complete_habit(&mut liste,0);
+        let habit_control = vector::borrow(&liste.habits,0);
+        assert!(habit_control.completed == true,1);
+    }
 }
 
