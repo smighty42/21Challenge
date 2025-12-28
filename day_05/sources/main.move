@@ -27,7 +27,7 @@ module challenge::day_05 {
 
     public fun empty_list(): HabitList {
         HabitList {
-            habits: vector::empty(),
+            habits: vector::empty(), 
         }
     }
 

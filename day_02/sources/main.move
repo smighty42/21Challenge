@@ -18,5 +18,6 @@ module challenge::day_02 {
          // result_sum 3'e eşit mi diye bakıyor değilse hata verir 
     }
 
+
 }
 
